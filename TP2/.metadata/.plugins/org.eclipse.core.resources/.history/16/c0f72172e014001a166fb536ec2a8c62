@@ -1,0 +1,12 @@
+package com.Ensim.Tp2.TP5.model;
+
+import javax.persistence.*;
+
+@Entity
+public class Adress {
+    @Id
+    @GeneratedValue
+    private Long id;
+    private Date creation;
+    private String content;
+}

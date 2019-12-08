@@ -1,0 +1,28 @@
+#Etape 5 :
+
+- Spring Web :
+- Spring Data JPA
+- Hibernate : Deja present dans JPA + 
+- H2 :
+- DevTools :
+- Tymeleaf :
+	
+#Etape 13 :
+
+- Avec quelle partie du code avons-nous paramétré l'url d'appel /gretting ? 
+		Avec le paramètre 'getName' dans le fichier 'helloworldcontroller'
+		
+- Avec quelle partie du code avons nous choisi le fichier HTML à afficher ?
+		Avec le  '@GetMapping("/greeting")'
+- Comment envoyons-nous le nom à qui nous disons bonjour avec le second lien?
+		"nameGET=" dans l'url
+		
+#Etape 17 :
+Avez-vous remarqué une difference ?
+_Une table "Adress" apparait (dans l'arboressance de la base de donnée "jdbc:h2:mem:testdb", en plus de "Information_schema", "Sequence" et "User" on y trouve une table, avec les attributs Id, content, et creation)
+	
+#Etape 18 : 
+	
+		
+		
+		
