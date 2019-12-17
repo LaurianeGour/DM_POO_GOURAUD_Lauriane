@@ -1,3 +1,5 @@
+					TP 2 :
+
 E1 -> E4 . aller sur spring.io : générer appli (generer le projet maven avec les dependances) (cf. image start.spring.io)
 
 E5 : A FAIRE !!!
@@ -43,8 +45,15 @@ E23 :  injection de dependance (le fait implicaitement)
 
 E24 : idem que E22, modifier des fautes de frappe/orthographes
 
-E25 : 
+E25 : OK 
 
+E 26 : Modifications faites : Voir Photo : AffichageE26
+
+E 27 : Difficultés à faire un fichier css à part : style directement dans le html
+
+E28 -> E30 : A FAIRE
+
+					TP 4 :
 
 
 
