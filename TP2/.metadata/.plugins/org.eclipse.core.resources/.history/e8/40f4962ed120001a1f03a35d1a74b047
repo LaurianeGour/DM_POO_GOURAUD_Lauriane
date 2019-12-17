@@ -32,11 +32,11 @@ public class Address {
 	public void setContent(String content) {
 		this.content = content;
 	}
-    public String getAuthor() {
-		return author;
+    public String getNomPersonne() {
+		return nomPersonne;
 	}
-	public void setAuthor(String author) {
-		this.author = author;
+	public void setNomPersonne(String nomPersonne) {
+		this.nomPersonne = nomPersonne;
 	}
 
 }

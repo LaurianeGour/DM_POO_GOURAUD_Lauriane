@@ -7,7 +7,7 @@
 	<body>
 		<h1>Les differentes addresses </h1>
 		<ul th:each="Address: ${allAddresses}">
-			<li th:text="${Address.author}"/>
+			<li th:text="${Address.nomPersonne}"/>
 			<li th:text="${Address.content}"/>
 		</ul>
 	</body>

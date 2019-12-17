@@ -11,7 +11,7 @@ public class Address {
     private Long id;
 	private Date creation;
     private String content;
-    private String author;
+    private String nomPersonne;
      
     
 	public Long getId() {
@@ -32,11 +32,11 @@ public class Address {
 	public void setContent(String content) {
 		this.content = content;
 	}
-    public String getAuthor() {
-		return author;
+    public String getNomPersonne() {
+		return nomPersonne;
 	}
-	public void setAuthor(String author) {
-		this.author = author;
+	public void setNomPersonne(String nomPersonne) {
+		this.nomPersonne = nomPersonne;
 	}
 
 }
