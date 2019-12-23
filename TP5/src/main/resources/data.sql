@@ -1,0 +1,2 @@
+INSERT INTO Address(id, creation, content, author) VALUES (1, CURRENT_TIMESTAMP(), 'C''est le premier contenu !', 'p1');
+INSERT INTO Address(id, creation, content, author) VALUES (2, CURRENT_TIMESTAMP(), 'C''est un autre contenu !', 'p2');

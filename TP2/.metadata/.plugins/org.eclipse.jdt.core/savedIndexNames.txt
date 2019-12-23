@@ -1,1 +1,0 @@
-INDEX VERSION 1.131+D:\Ecole\Ecole_Inge\4A info\S7\POO\DM_POO_GOURAUD_Lauriane\TP2\.metadata\.plugins\org.eclipse.jdt.core

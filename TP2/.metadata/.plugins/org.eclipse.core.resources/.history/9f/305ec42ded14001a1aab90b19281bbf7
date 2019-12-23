@@ -1,7 +1,0 @@
-package com.Ensim.Tp2.TP5.model;
-
-import org.springframework.data.repository.CrudRepository;
-
-public interface AddressRepository extends CrudRepository<Address, Long>{
-
-}

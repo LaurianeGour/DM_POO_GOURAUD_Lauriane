@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="style.css"/>
+</head>
+	<body>
+		<nav style="display : flex; background-color : #cceeff; padding: 0; border-radius : 0px 0px 10px 10px ; align-items: center;">
+		  <h1 style="padding : 0px 10px 0px 10px;">Les differentes addresses </h1>
+		  <ul style="display : flex; font-size: 20px;" >
+		    <li style="padding : 0px 10px 0px 10px; list-style-type: none; vertical-align : center;">
+		    	<a href="greeting" style="text-decoration: none;">greeting</a>
+		    </li>
+		    <li style="padding : 0px 10px 0px 10px; list-style-type: none; vertical-align : center;">
+		    	<a href="addresses" style="text-decoration: none;">addresses</a>
+		    </li>
+		  </ul>
+		</nav>
+    	<p th:text="'Bonjour ' + ${nomTemplate} + ' !'" />
+	</body>
+</html>
