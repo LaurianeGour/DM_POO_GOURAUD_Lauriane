@@ -5,17 +5,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.Ensim.Tp2.TP5.model.AddressRepository;
+import com.Ensim.Tp2.TP5.model.AdressRepository;
 
 @Controller
-public class AddressController {
+public class AdressController {
 
     @Autowired
-    AddressRepository addressRepository;
+    AdressRepository adressRepository;
 
-    @GetMapping("/addresses")
+    @GetMapping("/adresses")
     public String showAddresses(Model model) {
-        model.addAttribute("allAddresses", addressRepository.findAll());
-        return "addresses";
+        model.addAttribute("allAdresses", adressRepository.findAll());
+        return "adresses";
     }
 }

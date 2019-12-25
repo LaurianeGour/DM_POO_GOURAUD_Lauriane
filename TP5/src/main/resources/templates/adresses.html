@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 	<head>
-   		<title>greeting</title>
-    	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	</head>
+		<title>Adresses</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<head>
 	<style>
 		nav{
 			display : flex;
@@ -26,6 +26,26 @@
 		a{
 			text-decoration: none;
 		}
+		
+		table{
+			width:50%;
+			text-align : center;
+			margin : 10px;
+			border : 1px solid black;
+			border-collapse: collapse;
+		}
+		tr{
+			border : 1px solid black;
+			border-collapse: collapse;
+		}
+		th{
+			border : 1px solid black;
+			border-collapse: collapse;
+		}
+		td{
+			border : 1px solid black;
+			border-collapse: collapse;
+		}
 	</style>
 	<body>
 		<nav>
@@ -44,6 +64,17 @@
 		</nav>
 		
 		
-    	<p th:text="'Bonjour ' + ${nomTemplate} + ' !'" />
+		<table>
+		  <tr>
+		    <th>Nom de l'auteur</th>
+		    <th>Son addresse</th>
+		  </tr>
+		  <tr th:each="Adress: ${allAdresses}">
+		    <td th:text="${Adress.author}"></td>
+		    <td th:text="${Adress.content}"></td>
+		  </tr>
+		  
+		</table>
+		
 	</body>
 </html>

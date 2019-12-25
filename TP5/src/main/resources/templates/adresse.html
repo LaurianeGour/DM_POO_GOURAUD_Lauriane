@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 	<head>
-   		<title>greeting</title>
-    	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	</head>
+		<title>adresse</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<head>
 	<style>
 		nav{
 			display : flex;
@@ -26,6 +26,9 @@
 		a{
 			text-decoration: none;
 		}
+		form{
+			padding : 5px;
+		}
 	</style>
 	<body>
 		<nav>
@@ -43,7 +46,17 @@
 		  </ul>
 		</nav>
 		
+		<form method="post" action="/adresses">
+			<label for="numero">Entrez votre numero de voie : </label>
+			<input type="int" name="numero" id="numero" required>
+			<br/>
+			<br/>
+			<label for="nomVoie">Entrez le nom de notre voie : </label>
+			<input type="text" name="nomVoie" id="nomVoie" required>
+			<br/>
+			<br/>
+			<input type="submit" value="Valider">
+		</form>
 		
-    	<p th:text="'Bonjour ' + ${nomTemplate} + ' !'" />
 	</body>
 </html>

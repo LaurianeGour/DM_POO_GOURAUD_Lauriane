@@ -4,7 +4,7 @@ import java.util.Date;
 import javax.persistence.*;
 
 @Entity	//Permet de savoir que cette classe va correspondre à une table
-public class Address {
+public class Adress {
 	
     @Id
     @GeneratedValue

@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface AddressRepository extends CrudRepository<Address, Long>{
+public interface AdressRepository extends CrudRepository<Adress, Long>{
 
 }
