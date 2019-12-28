@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 	<head>
-		<title>Nouvelle adresse</title>
+		<title>meteo</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<head>
 	<style>
@@ -26,9 +26,6 @@
 		a{
 			text-decoration: none;
 		}
-		form{
-			padding : 5px;
-		}
 	</style>
 	<body>
 		<nav>
@@ -45,19 +42,6 @@
 		    </li>
 		  </ul>
 		</nav>
-		
-		<form method="post" action="/meteo">
-			<label>Format voulu : Numero   Rue   Nom de rue   Code postal </label>
-			<br/>
-			<label>ex : 8 boulevard du port 44380</label>
-			<br/>
-			<br/>
-			<label for="contentAdress">Obtenir la météo de l'adresse :  </label>
-			<input type="text" name="contentAdress" id="contentAdress" required>
-			<br/>
-			<br/>
-			<input type="submit" value="Valider">
-		</form>
 		
 	</body>
 </html>

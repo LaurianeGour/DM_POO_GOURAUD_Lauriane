@@ -1,28 +1,34 @@
 ###Lien du GitHub : 
->https://github.com/LaurianeGour/DM_POO_GOURAUD_Lauriane 
-
+https://github.com/LaurianeGour/DM_POO_GOURAUD_Lauriane 
 
 #TP 2 : Réalisation d'un application web avec Spring  Boot
 ##Etape 5 :
 
 Spring Web :
-> Utile lorsque l'on veut utiliser des API web avec Spring
+> Utile lorsque l'on veut utiliser des API web avec Spring.
 
 Spring Data JPA :
->
+> Facilite d'accès et l'utilisation des données : Bases de données et requetes SQL par exemple.
 
 Hibernate : 
->Deja present dans JPA + 
+> Permet la création automatique de bases de données à l'aide d'annotations.
 
 H2 :
->
+> Système de gestion de bases de données relationnelles.
 
 DevTools :
->
+> Facilite le developpement : Par exemple, permet de prendre en compte les modifications en rechargeant la page web. 
 
 Tymeleaf :
->
+> Permet de developper des pages web (html) en java : lie la vue et le controlleur.
 
+
+Bibliographie : 
+>- https://spring.io/guides/gs/serving-web-content/
+- https://spring.io/projects/spring-data-jpa
+- https://www.springboottutorial.com/hibernate-jpa-tutorial-with-spring-boot-starter-jpa
+- https://en.wikipedia.org/wiki/H2_(DBMS)
+	
 	
 ##Etape 13 :
 
@@ -54,4 +60,15 @@ Pouvez-vous trouver à quoi sert l'annotation @Autowierd du code précédent sur
 		
 	
 #TP 4 : Utilisation d'API web avec Spring Boot	
-		
+##Etape 6 : 
+>- Oui, il faut créer un compte sur DarkSky pour pouvoir obtenir une clef de 32 caractères en hexadecimal
+- Il faut appelerr l'URL "https://api.darksky.net/forecast/[clef]/[latitude],[longitude]"
+- La methode GET car les données (la latitude et la longitude) sont ajoutées à l'URL
+- Les paramètres sont ajoutés à l'URL et sont simplement séparés par une virgule
+
+
+
+###Secret Key DarkSky
+0badb24d2e9f4dfbcf71970b201abed3	
+
+
