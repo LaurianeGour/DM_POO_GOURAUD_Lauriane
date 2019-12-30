@@ -44,23 +44,41 @@ public class MeteoController {
 
 		String requeteMeteo = "https://api.darksky.net/forecast/" + KEY + "/" + latitude + "," + longitude;
 		URL url2 = new URL(requeteMeteo);
-		DarkSky_Result resulatMeteo = new ObjectMapper().readValue(url2, DarkSky_Result.class);
+		DarkSky_Result resultatMeteo = new ObjectMapper().readValue(url2, DarkSky_Result.class);
 		
-		
+		/*
 		//Pour visualiser les valeurs en mode debug
-		Date time = new Date((long) resulatMeteo.getCurrentlyObject().getTime());
-		String summary = resulatMeteo.getCurrentlyObject().getSummary();
-		float precipProbability = resulatMeteo.getCurrentlyObject().getPrecipProbability();
-		float temperature = resulatMeteo.getCurrentlyObject().getTemperature();
-		float apparentTemperature = resulatMeteo.getCurrentlyObject().getApparentTemperature();
-	 	float humidity = resulatMeteo.getCurrentlyObject().getHumidity();
-	 	float pressure = resulatMeteo.getCurrentlyObject().getPressure();
-		float windSpeed = resulatMeteo.getCurrentlyObject().getWindSpeed();
-		float cloudCover = resulatMeteo.getCurrentlyObject().getCloudCover();
-	 	float uvIndex = resulatMeteo.getCurrentlyObject().getUvIndex();
-	 	float visibility = resulatMeteo.getCurrentlyObject().getVisibility();
-
-	 		
+		Date time = new Date((long) resultatMeteo.getCurrentlyObject().getTime());
+		String summary = resultatMeteo.getCurrentlyObject().getSummary();
+		float precipProbability = resultatMeteo.getCurrentlyObject().getPrecipProbability();
+		float temperature = resultatMeteo.getCurrentlyObject().getTemperature();
+		float apparentTemperature = resultatMeteo.getCurrentlyObject().getApparentTemperature();
+	 	float humidity = resultatMeteo.getCurrentlyObject().getHumidity();
+	 	float pressure = resultatMeteo.getCurrentlyObject().getPressure();
+		float windSpeed = resultatMeteo.getCurrentlyObject().getWindSpeed();
+		float cloudCover = resultatMeteo.getCurrentlyObject().getCloudCover();
+	 	float uvIndex = resultatMeteo.getCurrentlyObject().getUvIndex();
+	 	float visibility = resultatMeteo.getCurrentlyObject().getVisibility();
+		 */
+	 	model.addAttribute("MeteoNow", resultatMeteo);
+	 	
+/*
+		//Pour visualiser les valeurs en mode debug
+		String summary = resultatMeteo.getDailyObject().getDataObject().get(0).getSummary();
+		float precipProbability = resultatMeteo.getDailyObject().getDataObject().get(0).getPrecipProbability();
+		float temperatureHigh = resultatMeteo.getDailyObject().getDataObject().get(0).getTemperatureHigh();
+		float temperatureLow = resultatMeteo.getDailyObject().getDataObject().get(0).getTemperatureLow();
+	 	float humidity = resultatMeteo.getDailyObject().getDataObject().get(0).getHumidity();
+	 	float pressure = resultatMeteo.getDailyObject().getDataObject().get(0).getPressure();
+		float windSpeed = resultatMeteo.getDailyObject().getDataObject().get(0).getWindSpeed();
+		float cloudCover = resultatMeteo.getDailyObject().getDataObject().get(0).getCloudCover();
+	 	float uvIndex = resultatMeteo.getDailyObject().getDataObject().get(0).getUvIndex();
+*/
+	 	model.addAttribute("MeteoDuJour",  resultatMeteo.getDailyObject().getDataObject().get(0));
+	 	
+	 	
+	 	model.addAttribute("AdresseMeteo", resultatAdr.getFeatures().get(0).getPropertiesObject().getLabel());
+	 	
 		return "meteo";
 	}
 }

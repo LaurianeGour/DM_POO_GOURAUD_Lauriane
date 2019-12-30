@@ -64,11 +64,8 @@ Pouvez-vous trouver à quoi sert l'annotation @Autowierd du code précédent sur
 >- Oui, il faut créer un compte sur DarkSky pour pouvoir obtenir une clef de 32 caractères en hexadecimal
 - Il faut appelerr l'URL "https://api.darksky.net/forecast/[clef]/[latitude],[longitude]"
 - La methode GET car les données (la latitude et la longitude) sont ajoutées à l'URL
-- Les paramètres sont ajoutés à l'URL et sont simplement séparés par une virgule
-
-
-
-###Secret Key DarkSky
-0badb24d2e9f4dfbcf71970b201abed3	
+- Les paramètres sont ajoutés à l'URL et sont simplement séparés par une virgule, des options supplémentaires peuvent être rajouter en ajoutant "?option=val" à la suite de l'URL
+- Dans la classe DarkSky_Result, qui contient un objet de type Currently, qui contient un attribut temperature
+- Dans la classe DarkSky_Result, qui contient un objet de type Daily, qui contient des objets de type Data, qui contient differentes prévisions pour la journée 
 
 

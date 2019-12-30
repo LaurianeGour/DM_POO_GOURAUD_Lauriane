@@ -4,22 +4,18 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Currently {
-
-	@JsonProperty("time")
-	private long time;
-
+public class Data {
 	@JsonProperty("summary")
 	private String summary;
-
+	
 	@JsonProperty("precipProbability")
 	private float precipProbability;
 
-	@JsonProperty("temperature")
-	private float temperature;
+	@JsonProperty("temperatureHigh")
+	private float temperatureHigh;
 
-	@JsonProperty("apparentTemperature")
-	private float apparentTemperature;
+	@JsonProperty("temperatureLow")
+	private float temperatureLow;
 
 	@JsonProperty("humidity")
 	private float humidity;
@@ -36,17 +32,8 @@ public class Currently {
 	@JsonProperty("uvIndex")
 	private float uvIndex;
 
-	@JsonProperty("visibility")
-	private float visibility;
-
-	public double getTime() {
-		return time;
-	}
-
-	public void setTime(long time) {
-		this.time = time;
-	}
-
+	
+	
 	public String getSummary() {
 		return summary;
 	}
@@ -63,20 +50,20 @@ public class Currently {
 		this.precipProbability = precipProbability;
 	}
 
-	public float getTemperature() {
-		return temperature;
+	public float getTemperatureHigh() {
+		return temperatureHigh;
 	}
 
-	public void setTemperature(float temperature) {
-		this.temperature = temperature;
+	public void setTemperatureHigh(float temperatureHigh) {
+		this.temperatureHigh = temperatureHigh;
 	}
 
-	public float getApparentTemperature() {
-		return apparentTemperature;
+	public float getTemperatureLow() {
+		return temperatureLow;
 	}
 
-	public void setApparentTemperature(float apparentTemperature) {
-		this.apparentTemperature = apparentTemperature;
+	public void setTemperatureLow(float temperatureLow) {
+		this.temperatureLow = temperatureLow;
 	}
 
 	public float getHumidity() {
@@ -119,13 +106,4 @@ public class Currently {
 		this.uvIndex = uvIndex;
 	}
 
-	public float getVisibility() {
-		return visibility;
-	}
-
-	public void setVisibility(float visibility) {
-		this.visibility = visibility;
-	}
-	
-	
 }

@@ -16,7 +16,8 @@
 			padding : 0px 10px 0px 10px;
 		}
 		ul{
-			display : flex; font-size: 20px;
+			display : flex;
+			font-size: 20px;
 		}
 		li{
 			padding : 0px 10px 0px 10px;
@@ -25,6 +26,29 @@
 		}
 		a{
 			text-decoration: none;
+		}
+		label{
+			font-size: 20px;
+		}
+		
+		table{
+			width:95%;
+			text-align : center;
+			margin : 10px;
+			border : 1px solid black;
+			border-collapse: collapse;
+		}
+		tr{
+			border : 1px solid black;
+			border-collapse: collapse;
+		}
+		th{
+			border : 1px solid black;
+			border-collapse: collapse;
+		}
+		td{
+			border : 1px solid black;
+			border-collapse: collapse;
 		}
 	</style>
 	<body>
@@ -42,6 +66,77 @@
 		    </li>
 		  </ul>
 		</nav>
+					
+		<div>
+			<ul th:each ="adresse : ${AdresseMeteo}">
+				<li th:text ="${AdresseMeteo}" />
+			</ul >
+			
+			<label>The weather is, for the moment : </label>
+			<br/>
+			
+			<table>
+				<tr>
+		    		<th>Summary</th>
+			   		<th>Temperature (°F)</th>
+			   		<th>Apparent Temperature (°F)</th>
+			   		<th>Humidity</th>
+			   		<th>Precipitation</th>
+			   		<th>Pressure</th>
+		   			<th>Wind Speed</th>
+		   			<th>Cloud Cover</th>
+			   		<th>UV Index</th>
+			   		<th>Visibility</th>
+			  	</tr>
+		  		<tr th:each="meteo: ${MeteoNow}">
+		    		<td th:text="${MeteoNow.CurrentlyObject.summary}"></td>
+		   			<td th:text="${MeteoNow.CurrentlyObject.temperature}"></td>
+			 		<td th:text="${MeteoNow.CurrentlyObject.apparentTemperature}"></td>
+			 		<td th:text="${MeteoNow.CurrentlyObject.humidity}"></td>
+			 		<td th:text="${MeteoNow.CurrentlyObject.precipProbability}"></td>
+		 			<td th:text="${MeteoNow.CurrentlyObject.pressure}"></td>
+		 			<td th:text="${MeteoNow.CurrentlyObject.windSpeed}"></td>
+			 		<td th:text="${MeteoNow.CurrentlyObject.cloudCover}"></td>
+			 		<td th:text="${MeteoNow.CurrentlyObject.uvIndex}"></td>
+			 		<td th:text="${MeteoNow.CurrentlyObject.visibility}"></td>
+		 		</tr>
+		 	</table>
+		 	
+		 	
+		 	<br/>
+		 	<br/>
+		 	<label>The weather is, for the day : </label>
+			<br/>
+			
+			<table>
+				<tr>
+		    		<th>Summary</th>
+			   		<th>temperature High (°F)</th>
+			   		<th>Temperature Low (°F)</th>
+			   		<th>Humidity</th>
+			   		<th>Precipitation</th>
+			   		<th>Pressure</th>
+		   			<th>Wind Speed</th>
+		   			<th>Cloud Cover</th>
+			   		<th>UV Index</th>
+			  	</tr>
+		  		<tr th:each="meteo: ${MeteoDuJour}">
+		    		<td th:text="${MeteoDuJour.summary}"></td>
+		   			<td th:text="${MeteoDuJour.temperatureHigh}"></td>
+			 		<td th:text="${MeteoDuJour.temperatureLow}"></td>
+			 		<td th:text="${MeteoDuJour.humidity}"></td>
+			 		<td th:text="${MeteoDuJour.precipProbability}"></td>
+		 			<td th:text="${MeteoDuJour.pressure}"></td>
+		 			<td th:text="${MeteoDuJour.windSpeed}"></td>
+			 		<td th:text="${MeteoDuJour.cloudCover}"></td>
+			 		<td th:text="${MeteoDuJour.uvIndex}"></td>
+		 		</tr>
+		 	</table>
+		</div>
+		
+		
+		
+		
 		
 	</body>
 </html>

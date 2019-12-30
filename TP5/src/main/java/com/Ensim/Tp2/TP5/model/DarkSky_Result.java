@@ -1,7 +1,9 @@
 package com.Ensim.Tp2.TP5.model;
 
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class DarkSky_Result {
 
@@ -14,6 +16,9 @@ public class DarkSky_Result {
 	@JsonProperty("currently")
 	Currently CurrentlyObject;
 
+	@JsonProperty("daily")
+	Daily DailyObject;
+	
 	public float getLatitude() {
 		return latitude;
 	}
@@ -38,4 +43,13 @@ public class DarkSky_Result {
 		CurrentlyObject = currentlyObject;
 	}
 
+	public Daily getDailyObject() {
+		return DailyObject;
+	}
+
+	public void setDailyObject(Daily dailyObject) {
+		DailyObject = dailyObject;
+	}
+
+	
 }
